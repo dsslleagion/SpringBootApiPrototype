@@ -6,11 +6,11 @@ grant select, insert, delete, update on spring.* to user@'localhost';
 use spring;
 
 create table log (
-    log_id bigint unsigned not null auto_increment,
-    dataEntrada datetime not null,
-    dataSaida datetime not null,
-    primary key (log_id)
+    id bigint unsigned not null auto_increment,
+    data_entrada datetime not null,
+    data_saida datetime not null,
+    primary key (id)
 );
 
-insert into log (dataEntrada, dataSaida)
+insert into log (data_entrada, data_saida)
 values ('2023-08-01 19:10', '2023-08-01 20:30');

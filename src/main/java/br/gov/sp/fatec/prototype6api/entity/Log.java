@@ -20,11 +20,13 @@ public class Log {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "entrada")
+    @Column(name = "data_entrada")
     private Date dataEntrada;
-
-    @Column(name = "saida")
+    
+    @Column(name = "data_saida")
     private Date dataSaida;
+    
+    
 
     // Getters e Setters
     public Long getId() {
