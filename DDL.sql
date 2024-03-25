@@ -7,10 +7,10 @@ use spring;
 
 create table log (
     log_id bigint unsigned not null auto_increment,
-    entrada datetime not null,
-    saida datetime not null,
+    dataEntrada datetime not null,
+    dataSaida datetime not null,
     primary key (log_id)
 );
 
-insert into log (entrada, saida)
+insert into log (dataEntrada, dataSaida)
 values ('2023-08-01 19:10', '2023-08-01 20:30');
