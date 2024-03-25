@@ -1,15 +1,14 @@
 package br.gov.sp.fatec.prototype6api.entity;
 
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+
+import java.time.LocalDateTime;
 import java.util.Date;
-
-
 
 @Entity
 @Table(name = "log")
@@ -20,11 +19,11 @@ public class Log {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "entrada_saida")
-    private boolean entradaSaida;
+    @Column(name = "entrada_saida", columnDefinition = "ENUM('1', '0')")
+    private String entradaSaida;
     
-    @Column(name = "data_registro")
-    private Date dataRegistro;
+    @Column(name = "data")
+    private LocalDateTime dataRegistro;
 
     // Getters e Setters
     public Long getId() {
@@ -35,19 +34,19 @@ public class Log {
         this.id = id;
     }
 
-    public boolean isEntradaSaida() {
+    public String getEntradaSaida() {
         return entradaSaida;
     }
 
-    public void setEntradaSaida(boolean entradaSaida) {
+    public void setEntradaSaida(String entradaSaida) {
         this.entradaSaida = entradaSaida;
     }
 
-    public Date getDataRegistro() {
+    public LocalDateTime getDataRegistro() {
         return dataRegistro;
     }
 
-    public void setDataRegistro(Date dataRegistro) {
+    public void setDataRegistro(LocalDateTime dataRegistro) {
         this.dataRegistro = dataRegistro;
     }
 }

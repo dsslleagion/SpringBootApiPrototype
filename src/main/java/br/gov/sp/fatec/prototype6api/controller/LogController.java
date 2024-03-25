@@ -1,5 +1,3 @@
-// LogController.java
-
 package br.gov.sp.fatec.prototype6api.controller;
 
 import java.util.List;

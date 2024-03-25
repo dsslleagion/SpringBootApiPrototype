@@ -6,13 +6,13 @@ create user 'user'@'localhost' identified by 'pass123';
 grant select, insert, delete, update on spring.* to user@'localhost';
 use spring;
 
-create table log (
-    id bigint unsigned not null auto_increment,
-    entrada_saida boolean not null,
-    data_registro datetime not null,
-    primary key (id)
+CREATE TABLE log (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    entrada_saida ENUM('1', '0') NOT NULL,
+    data TIMESTAMP
 );
 
-insert into log (entrada_saida, data_registro)
-values (1, '2023-08-01 19:10'), -- Entrada
-       (0, '2023-08-01 20:30'); -- Saída
+
+insert into log (entrada_saida, data)
+values ('1', '2023-08-01'), -- Entrada
+       ('0', '2023-08-01'); -- Saída
