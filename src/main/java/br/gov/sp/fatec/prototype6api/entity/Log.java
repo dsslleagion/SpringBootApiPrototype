@@ -20,13 +20,11 @@ public class Log {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "data_entrada")
-    private Date dataEntrada;
+    @Column(name = "entrada_saida")
+    private boolean entradaSaida;
     
-    @Column(name = "data_saida")
-    private Date dataSaida;
-    
-    
+    @Column(name = "data_registro")
+    private Date dataRegistro;
 
     // Getters e Setters
     public Long getId() {
@@ -37,19 +35,19 @@ public class Log {
         this.id = id;
     }
 
-    public Date getDataEntrada() {
-        return dataEntrada;
+    public boolean isEntradaSaida() {
+        return entradaSaida;
     }
 
-    public void setDataEntrada(Date dataEntrada) {
-        this.dataEntrada = dataEntrada;
+    public void setEntradaSaida(boolean entradaSaida) {
+        this.entradaSaida = entradaSaida;
     }
 
-    public Date getDataSaida() {
-        return dataSaida;
+    public Date getDataRegistro() {
+        return dataRegistro;
     }
 
-    public void setDataSaida(Date dataSaida) {
-        this.dataSaida = dataSaida;
+    public void setDataRegistro(Date dataRegistro) {
+        this.dataRegistro = dataRegistro;
     }
 }

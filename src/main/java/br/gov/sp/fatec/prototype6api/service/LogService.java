@@ -1,4 +1,7 @@
+// LogService.java
+
 package br.gov.sp.fatec.prototype6api.service;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -23,7 +26,7 @@ public class LogService {
     }
 
     public Log novoLog(Log log) {
-        if (log == null || log.getDataEntrada() == null || log.getDataSaida() == null) {
+        if (log == null || log.getDataRegistro() == null) {
             throw new IllegalArgumentException("Dados inválidos!");
         }
         return logRepo.save(log);

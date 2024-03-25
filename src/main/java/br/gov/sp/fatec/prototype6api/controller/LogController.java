@@ -1,3 +1,5 @@
+// LogController.java
+
 package br.gov.sp.fatec.prototype6api.controller;
 
 import java.util.List;
@@ -34,5 +36,5 @@ public class LogController {
     @GetMapping(value = "/{id}")
     public Log buscarLogPorId(@PathVariable("id") Long id) {
         return service.buscarPorId(id);
-}
+    }
 }
