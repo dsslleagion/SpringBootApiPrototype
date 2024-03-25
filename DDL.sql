@@ -9,7 +9,7 @@ use spring;
 CREATE TABLE log (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     entrada_saida ENUM('1', '0') NOT NULL,
-    data TIMESTAMP
+    data TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 

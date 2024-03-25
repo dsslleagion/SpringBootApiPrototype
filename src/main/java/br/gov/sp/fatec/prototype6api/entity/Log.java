@@ -21,9 +21,9 @@ public class Log {
 
     @Column(name = "entrada_saida", columnDefinition = "ENUM('1', '0')")
     private String entradaSaida;
-    
-    @Column(name = "data")
-    private LocalDateTime dataRegistro;
+
+    @Column(name = "data", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    private LocalDateTime dataRegistro; // Alterado para LocalDateTime
 
     // Getters e Setters
     public Long getId() {
